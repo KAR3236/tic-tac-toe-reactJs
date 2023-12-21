@@ -1,4 +1,5 @@
 export function CalculateWinner(squares) {
+    let element;
     const lines = [
         [0,1,2],
         [3,4,5],
@@ -10,7 +11,7 @@ export function CalculateWinner(squares) {
         [2,4,6],
     ];
 
-    for (const element of lines) {
+    for (element of lines) {
         const [a,b,c] = element;
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             return squares[a];
